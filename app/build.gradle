@@ -138,10 +138,16 @@ android {
         // WebView
         ////////////////////////////////////////////////////////////////////////////////////////////
 
-        // Release
+        androidTest {
+            res.srcDir('src/androidTest/assets')
+        }
 
-        androidTestfocusWebviewCompile {
-            java.srcDirs += ['src/androidTestFocusWebview/java']
+        androidTestWebviewCompile {
+            java.srcDirs += ['src/androidTestWebview/java']
+        }
+
+        androidTestGeckoCompile {
+            java.srcDirs += ['src/androidTestGecko/java']
         }
             focusWebviewUniversalRelease {
             java.srcDir 'src/focusRelease/java'
